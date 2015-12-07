@@ -1,0 +1,13 @@
+<section class="gists">
+  <h1>Github Gists</h1>
+  <article ng-repeat="stuff in gistData">
+    <h3 ng-bind-html="stuff.description"></h3>
+    <time>{{stuff.data.updated_at | date: "mediumTime"}}</time>
+    <h4>files</h4>
+    <p ng-if="stuff.data.files" ng-repeat="file in stuff.data.files">
+      <a href="{{file.raw_url}}">{{file.filename}}</a>
+      <span class="type">{{file.type}}</span>
+      <span class="language" ng-if="file.language !== null">{{file.language}}</span>
+    </p>
+  </article>
+</section>

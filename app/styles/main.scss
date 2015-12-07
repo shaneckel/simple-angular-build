@@ -1,0 +1,24 @@
+
+// partial imports
+
+@import 'vars';
+@import 'typography';
+@import 'nav';
+@import 'header';
+@import 'footer';
+
+@import 'swag';
+@import 'swank';
+@import 'gists';
+
+// global overwrite the imports below
+
+body{
+  background: url('../images/geometry.png');
+}
+
+.home{
+  h1{
+    color: cornflowerblue; // <-- lol at that fight club color name.
+  }
+}

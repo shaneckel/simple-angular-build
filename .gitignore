@@ -1,0 +1,8 @@
+
+#normal computer stuff'n'junk.
+.DS_Store
+logs
+*.log
+
+#install on dev environment.
+node_modules
