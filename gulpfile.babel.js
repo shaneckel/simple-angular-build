@@ -38,25 +38,24 @@ import watchify       from 'watchify';
 
 gulp.task('default', ['dev']); // "gulp"
 
-gulp.task('dev', ['clean'], function(cb) {
+gulp.task('dev', function() {
   global.isProd = false;
-  runSequence(['styles', 'images', 'views', 'browserify'], 'watch', cb);
+  runSequence(['clean', 'styles', 'images', 'views', 'browserify'], 'watch');
 });
 
 
 // production compile
 
-gulp.task('prod', ['clean'], function(cb) {
-  cb = cb || function() {};
+gulp.task('prod', function() {
   global.isProd = true;
-  runSequence(['styles', 'images', 'views', 'browserify'], cb);
+  runSequence( ['clean', 'styles', 'images', 'views', 'browserify']);
 });
 
 
 // clean directory
 
-gulp.task('clean', function(cb) {
-  del([config.buildDir], cb);
+gulp.task('clean', function() {
+  del([config.buildDir]);
 });
 
 
