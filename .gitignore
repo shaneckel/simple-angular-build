@@ -4,5 +4,8 @@
 logs
 *.log
 
+#ignore the build folder because... why not really
+build
+
 #install on dev environment.
 node_modules
