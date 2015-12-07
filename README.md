@@ -37,6 +37,5 @@ hurry and working for yourself.
 break out each partial using `_` and import them into main.scss
 ### /app/views/
 the views are compiled into cached templated views and concatenated into main.js
----
 ### /build
 build directory. depending on whether you've run `gulp` or `gulp prod` this folder will either be compiled or open.
